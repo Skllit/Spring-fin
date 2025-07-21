@@ -3,6 +3,8 @@ return new ResponseEntity<>(body, HttpStatus.CREATED); // 201 Created
 return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null); // 404
 return ResponseEntity.noContent().build(); // 204 No Content
 
+
+gif um dream
 -------------------------------------
 create
 new RE<>(obj,Hs.Created)
