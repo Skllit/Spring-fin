@@ -73,10 +73,44 @@ return student.removeIF(s->s.getID()==id)
 }
 
 -------------------------------------------------------------------------------------------
-  
+  Employee  id,name,dept
+
+private final List<Employee>employees=new ArrayList<>();
+int counter=1;
+
+//add
+public Employee Add(Employee emp){
+emp.setId(coounter++)
+employees.push(emp)
+return emp;
+}
 
 
+//getall
+public List<Employee> getALl(){
+return employees;
+}
 
 
+//getbyid
+
+public Optional<Employee>GetById(int id){
+return employees.stream.filter(e->e.getId()==id).findFirst();
+
+}
 
 
+//update
+public Optinal<Employee> Update(int id,EMployee emp){
+return getbyId(id).map(e->{
+e.setName(emp.getName)
+e.SetDept(emp.getDEp)
+return e;
+})
+}
+
+//delete
+
+public boolean Delete(int id){
+return students.removeIf(e->e.getId()==id);
+}
